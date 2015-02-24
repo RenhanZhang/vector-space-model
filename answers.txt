@@ -1,0 +1,20 @@
+Name: Renhan Zhang
+Unique name: rhzhang
+
+For my own scheme, I used txc for document and nfx for query. If you want to see the result of my own scheme, run the
+program by typing as follows,
+$ python vectorspace.py myown myown cranfieldDocs/ cranfield.queries.test
+
+Weighting scheme for document is tfidf for query is tfidf 
+For the top 10 documents, the precision is 0.1696 and the recall is 0.280231201805
+For the top 50 documents, the precision is 0.07136 and the recall is 0.557546625597
+For the top 100 documents, the precision is 0.04464 and the recall is 0.675274681854
+For the top 500 documents, the precision is 0.01216 and the recall is 0.887344956677
+
+Weighting scheme for document is txc for query is nfx 
+For the top 10 documents, the precision is 0.1464 and the recall is 0.246424688384
+For the top 50 documents, the precision is 0.06336 and the recall is 0.516578454226
+For the top 100 documents, the precision is 0.0412 and the recall is 0.644959625016
+For the top 500 documents, the precision is 0.01208 and the recall is 0.876492303775
+
+From the table above, it's observed that tfidf-tfidf performs uniformly better than my own. One possible reason is that txc scheme does not use the information provided by idf and hence fails to consider the extent of a word's scarcity.
